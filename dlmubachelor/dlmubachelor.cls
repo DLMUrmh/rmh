@@ -180,11 +180,11 @@
 	\vspace{10pt}}{\phantomsection\addcontentsline{toc}{section}{摘\hspace{2em}要}\newpage}
 
 %% 定义英文摘要环境
-\newcommand{\enabstractname}{\centering\bf\zihao{3}Abstract\par}
+\newcommand{\enabstractname}{\centering\bf\zihao{3}ABSTRACT\par}
 \providecommand{\keywordsen}{\par\vspace{\baselineskip}\noindent{\bf Keywords：}}
 \newenvironment{enabstract}{
 	\vspace{20pt}{\enabstractname}
-	\vspace{10pt}}{\phantomsection\addcontentsline{toc}{section}{Abstract}\newpage}
+	\vspace{10pt}}{\phantomsection\addcontentsline{toc}{section}{ABSTRACT}\newpage}
 
 %% 定义致谢环境
 \newcommand{\thinkingname}{\centering\bf\zihao{3}致\hspace{2em}谢\par}
