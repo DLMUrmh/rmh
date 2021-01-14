@@ -20,6 +20,10 @@
 %% 页面布局
 \RequirePackage[a4paper,margin=2.5cm]{geometry}
 
+%% 行距设置
+\RequirePackage{setspace}
+\setstretch{1.25}
+
 %% 段落间距设置
 \setlength{\parskip}{0pt}
 
