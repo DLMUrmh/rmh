@@ -1,0 +1,52 @@
+\documentclass{dlmubachelor}
+
+\dlmubachelorset{%
+	title=大连海事大学本科毕业设计(论文)\\ \LaTeX 文档类, % 论文中文标题，太长可用\\折行
+	institute=船舶与海洋工程学院, % 学院
+	majorclass=能源与动力工程3班, % 专业班级
+	name=姓名,  % 姓名
+	mentor=指导教师,    % 指导教师
+	date=二〇二一年六月   % 完成日期
+}
+
+%% 页面设置，如果打印装订线（将left设置为3cm）取消下面的注释即可，建议提交老师的文档不打印装订线(left默认为2.5cm)，打印纸质版文档打印装订边
+%\geometry{left=3cm}
+
+%% 这个命令用于在正文页眉打印标题，不用折行
+\renewcommand{\onelinetitle}{大连海事大学本科毕业设计(论文)\LaTeX 文档类}
+
+\begin{document}
+
+\maketitle
+%% 摘要页及目录页眉页脚设置
+\setcounter{page}{1}
+\pagenumbering{Roman} % 设置页码格式为大写罗马字母
+\pagestyle{plain}
+
+%% 用include命令的话读入新的文件会另起一页，而input不会。我们并不需要另起一页，所以用input命令
+\input{element/abstract.tex} % 摘要页
+\phantomsection\addcontentsline{toc}{section}{目\hspace{2em}录}
+\tableofcontents
+\newpage
+
+%% 正文页眉页脚设置
+\setcounter{page}{1}
+\fancypagestyle{plain}{
+	\fancyhf{} % 清空页眉页脚
+	\chead{\zihao{5}\onelinetitle}
+	\cfoot{\zihao{5}\thepage}
+	\renewcommand{\headrulewidth}{0.4pt}
+}
+\pagestyle{plain} % 使用重新定义的plain格式
+\pagenumbering{arabic} % 设置页码格式为阿拉伯数字
+
+
+%% 正文
+\input{chapters/ch1.tex} % 第一章
+\input{chapters/ch2.tex} % 第二章
+
+\input{chapters/conclusion.tex} % 结论
+\input{element/mybib.tex} % 参考文献
+\input{element/thanking.tex} % 致谢
+\input{chapters/appendix.tex} % 附录
+\end{document}

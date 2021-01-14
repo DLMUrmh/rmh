@@ -1,0 +1,19 @@
+\contentsline {section}{摘\hspace {2em}要}{I}{section*.1}%
+\contentsline {section}{ABSTRACT}{II}{section*.2}%
+\contentsline {section}{目\hspace {2em}录}{III}{section*.3}%
+\contentsline {section}{大连海事大学本科毕业设计(论文)\LaTeX 文档类}{1}{section*.4}%
+\contentsline {section}{\numberline {1}文类简介、选项与设置}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}文类简介}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}选项与设置}{1}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}三级标题}{1}{subsubsection.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.1}四级标题}{1}{paragraph.1.2.1.1}%
+\contentsline {section}{\numberline {2}公式、表格与插图}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}公式}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}表格}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}图片}{3}{subsection.2.3}%
+\contentsline {section}{结论}{6}{section*.9}%
+\contentsline {section}{参\hspace {1ex}考\hspace {1ex}文\hspace {1ex}献}{7}{section*.10}%
+\contentsline {section}{致\hspace {2em}谢}{8}{section*.11}%
+\contentsline {section}{附录1}{9}{section*.12}%
+\contentsline {section}{附录2}{10}{section*.13}%
+\contentsfinish 
