@@ -19,9 +19,9 @@
 %% 页面布局
 \RequirePackage[a4paper,margin=2.5cm]{geometry}
 
-%% 行距设置
+%% 行距设置,行距设置很迷，这是我将pdf文档转成Word后根据比例换算得到的
 \RequirePackage{setspace}
-\setstretch{1.25}
+\setstretch{1.33547}
 
 %% 段落间距设置
 \setlength{\parskip}{0pt}
@@ -107,7 +107,7 @@
 \let\dlmubachelor@endoldtabular\endtabular
 \renewenvironment{tabular}%
 {\bgroup%
-	\zihao{5}\renewcommand{\arraystretch}{1.25}%
+	\zihao{5}\renewcommand{\arraystretch}{1.33547}%
 	\dlmubachelor@oldtabular}%
 {\dlmubachelor@endoldtabular\egroup}
 
