@@ -11,23 +11,14 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{dlmubachelor}[2021/02/04 v1.2 Dalian Maritime University Thesis Template for Bachelor Degree]
+\ProvidesClass{dlmubachelor}[2021/04/03 v2.0 Dalian Maritime University Thesis Template for Bachelor Degree]
 \LoadClass[12pt]{article}
-
-\RequirePackage[zihao=-4]{ctex}
 
 %% 页面布局
 \RequirePackage[a4paper,margin=2.5cm]{geometry}
 
-%% 行距设置,行距设置很迷，这是我将pdf文档转成Word后根据比例换算得到的1.25倍行距
-\RequirePackage{setspace}
-\setstretch{1.33547}
-
-%% 段落间距设置
-\setlength{\parskip}{0pt}
-
-%% 首行缩进
-\setlength{\parindent}{2em}
+%% 中文支持
+\RequirePackage[zihao=-4]{ctex}
 
 %% 新罗马字体相关
 \RequirePackage[T1]{fontenc}
@@ -37,6 +28,19 @@
 \let\songti\relax
 \newCJKfontfamily\songti{SimSun}[AutoFakeBold]
 \setCJKmainfont{SimSun}[AutoFakeBold]
+
+%% 行距设置
+\RequirePackage[
+restoremathleading=false,
+UseMSWordMultipleLineSpacing=true,
+MSWordLineSpacingMultiple=1.25
+]{zhlineskip}
+
+%% 段落间距设置
+\setlength{\parskip}{0pt}
+
+%% 首行缩进
+\setlength{\parindent}{2em}
 
 % 键值对设置（使用 \setkeys{} 设置文档内容）
 \RequirePackage{xkeyval}
@@ -51,6 +55,7 @@
 }
 \providecommand{\dlmubachelorset}[1]{\setkeys{dlmubachelor}{#1}}
 
+%% 设置单行标题，放在正文第一页
 \newcommand{\onelinetitle}{您的论文题目}
 
 % 编号的深度, 4 表示到 paragraph
@@ -88,14 +93,6 @@
 \RequirePackage{amssymb}
 \RequirePackage{bm}
 \numberwithin{equation}{section}
-% 下面修改的是公式与上下文间距
-\renewcommand\normalsize{%
-	\@setfontsize\normalsize\@xpt\@xiipt
-	\abovedisplayskip 3\p@ \@plus0\p@ \@minus0\p@
-	\abovedisplayshortskip 3\p@
-	\belowdisplayshortskip 3\p@
-	\belowdisplayskip 3\p@ \@plus0\p@ \@minus0\p@
-	\let\@listi\@listI}
 
 %% 表格相关
 \RequirePackage{array,tabularx} % 表格
@@ -107,12 +104,12 @@
 \let\dlmubachelor@endoldtabular\endtabular
 \renewenvironment{tabular}%
 {\zihao{5}\bgroup%
-	\renewcommand{\arraystretch}{1.33547}%
+	%\renewcommand{\arraystretch}{1.33547}
 	\dlmubachelor@oldtabular}%
 {\dlmubachelor@endoldtabular\egroup}
 
 %% 排版图片
-\RequirePackage{graphicx,subfig,flafter}
+\RequirePackage{graphicx,subfig,flafter,wrapfig}
 % 以下设置使得一页上最多有六个浮动对象（图、表）
 % 且顶部最多三个，底部最多三个
 % 可自行修改参数
@@ -211,8 +208,6 @@
 \renewcommand{\refname}{\centerline{参\hspace{1ex}考\hspace{1ex}文\hspace{1ex}献\vspace{-20pt}}}
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}} % 自定义新命令\upcite, 使参考文献引用以上标出现
 
-
-
 %% 页眉页脚设置
 \RequirePackage{fancyhdr}
 \fancypagestyle{plain}{
@@ -223,8 +218,12 @@
 
 %% 代码环境设置
 \RequirePackage{listings}
+\RequirePackage{accsupp}
+\newcommand\emptyaccsupp[1]{\BeginAccSupp{ActualText={}}#1\EndAccSupp{}}
 \lstset{
 	basicstyle=\ttfamily,
 	backgroundcolor = \color[rgb]{0.902,0.902,0.902},
-	breaklines = true
+	breaklines = true,
+	numbers = left,
+	numberstyle=\emptyaccsupp
 }
