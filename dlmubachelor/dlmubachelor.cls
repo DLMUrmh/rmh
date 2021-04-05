@@ -109,7 +109,7 @@ MSWordLineSpacingMultiple=1.25
 {\dlmubachelor@endoldtabular\egroup}
 
 %% 排版图片
-\RequirePackage{graphicx,subfig,flafter,wrapfig}
+\RequirePackage{graphicx,subfig,flafter,wrapfig,float}
 % 以下设置使得一页上最多有六个浮动对象（图、表）
 % 且顶部最多三个，底部最多三个
 % 可自行修改参数
