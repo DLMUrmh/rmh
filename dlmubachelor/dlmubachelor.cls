@@ -15,7 +15,7 @@
 \LoadClass[12pt]{article}
 
 %% 页面布局
-\RequirePackage[a4paper,margin=2.5cm]{geometry}
+\RequirePackage[a4paper,margin=2.5cm,headsep=3mm]{geometry}
 
 %% 中文支持
 \RequirePackage[zihao=-4]{ctex}
@@ -93,6 +93,12 @@ MSWordLineSpacingMultiple=1.25
 \RequirePackage{amssymb}
 \RequirePackage{bm}
 \numberwithin{equation}{section}
+% 直立积分号
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
 
 %% 表格相关
 \RequirePackage{array,tabularx} % 表格
@@ -126,6 +132,8 @@ MSWordLineSpacingMultiple=1.25
 \numberwithin{table}{section}
 
 \RequirePackage[font=footnotesize,labelsep=space,labelfont=bf,textfont=bf]{caption} % 序号之后空一格写标题
+\captionsetup[subfloat]{labelfont=bf,labelformat=simple}
+\renewcommand{\thesubfigure}{\alph{subfigure})}%使子图编号为 a)的格式
 
 %% 超链接，交叉引用相关
 \RequirePackage[hidelinks]{hyperref} % 设置超链接黑白打印（不带其他颜色的框）
@@ -169,14 +177,14 @@ MSWordLineSpacingMultiple=1.25
 		\parbox[t][66mm]{140mm}{\centering\dlmubachelor@title}
 		\par
 		\begin{tabular}{cc}
-			\zihao{2}专业班级：         & \zihao{2}\dlmubachelor@majorclass \vspace{-4pt}\\ \cline{2-2}
+			\zihao{2}专业班级：         & \zihao{2}\dlmubachelor@majorclass \vspace{-2pt}\\ \cline{2-2}
 			& \vspace{2mm}                      \\
-			\zihao{2}姓\hspace{2em}名： & \zihao{2}\dlmubachelor@name       \vspace{-4pt}\\ \cline{2-2}
+			\zihao{2}姓\hspace{2em}名： & \zihao{2}\dlmubachelor@name       \vspace{-2pt}\\ \cline{2-2}
 			& \vspace{2mm}                      \\
-			\zihao{2}指导教师：         & \zihao{2}\dlmubachelor@mentor     \vspace{-4pt}\\ \cline{2-2}
+			\zihao{2}指导教师：         & \zihao{2}\dlmubachelor@mentor     \vspace{-2pt}\\ \cline{2-2}
 		\end{tabular}
 		
-		\vspace{50mm}
+		\vspace{66mm}
 		\dlmubachelor@institute
 	\end{center}
 	\newpage
@@ -215,6 +223,9 @@ MSWordLineSpacingMultiple=1.25
 	\cfoot{\zihao{5}\thepage}
 	\renewcommand{\headrulewidth}{0pt}
 }
+
+%% 局部页面横排
+\RequirePackage{pdflscape}
 
 %% 代码环境设置
 \RequirePackage{listings}
