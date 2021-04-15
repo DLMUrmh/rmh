@@ -68,7 +68,7 @@ MSWordLineSpacingMultiple=1.25
 \titleformat{\section}{\bf\songti\zihao{3}}{第\,\thesection\,章}{1ex}{\bf\songti\zihao{3}}[]
 \titleformat{\subsection}{\bf\songti\zihao{4}}{\thesubsection}{1ex}{\bf\songti\zihao{4}}[]
 \titleformat{\subsubsection}{\bf\songti\zihao{-4}}{\thesubsubsection}{1ex}{\bf\songti\zihao{-4}}[]
-\titleformat{\paragraph}{\bf\songti\zihao{-4}}{\theparagraph}{1ex}{\bf\songti\zihao{-4}}[]
+\titleformat{\paragraph}{\songti\zihao{-4}}{\theparagraph}{1ex}{\songti\zihao{-4}}[]
 
 \titlespacing{\section}{0pt}{20pt}{10pt}
 \titlespacing{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip}
